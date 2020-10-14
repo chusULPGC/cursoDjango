@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>
+
+    {% block title %} 
+    
+    
+    {% endblock %}
+
+</title>
+
+</head>
+
+
+
+
+<body>
+
+    <h1 style="background-color: green; color: white; text-align: center;">PÁGINA DE CHUS</h1>
+
+    {% include "superior/barra.html" %}
+    
+    <h3 style="background-color: #0088b6; color: white; text-align: center;">PROBANDO LA HERENCIA EN DJANGO</h3>
+
+    {% block content %} 
+    
+    
+    
+    
+    
+    
+    {% endblock %}
+
+    <p style="background-color: green; color: white; text-align: center;">Gracias por su visita</p>
+
+</body>
+
+
+
+</html>

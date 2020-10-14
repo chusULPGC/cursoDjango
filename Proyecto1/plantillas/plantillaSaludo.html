@@ -1,0 +1,31 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    {% include "superior/barra.html" %}
+
+
+    <!-- con las 2 llaves estamos recogiendo la variable que pasamos desde la vista "views.py" -->
+    <h1 style="color:brown">Hola {{nombre_persona}} {{apellido_persona}}. Estamos viendo nuestra primera plantilla</h1>
+    <h2 style="color:darkblue">La fecha es {{ahora.day}}/{{ahora.month}}/{{ahora.year}} </h2>
+    <h3 style="color:darkorange">Hola {{name}} {{apellido}}. </h3>
+    <h4  style="color:darkgreen">{{temas}}</h4>
+    <h4  style="color:darkgreen">{{temas.2}}</h4>
+    <h4  style="color:darkred">Temas del curso:</h4>
+    <h4  style="color:darkred">
+        <ul>
+        {%if temas %} <!--condicional en plantillas-->
+            {%for elTema in temas %} <!--bucle for dentro de plantilla-->
+                <li>{{elTema}}</li>
+            {% endfor %}
+        {% else %}
+            <p>No hay elementos que mostrar</p>
+        {% endif %}
+        </ul>
+
+    </h4>
+</body>
+
+</html>

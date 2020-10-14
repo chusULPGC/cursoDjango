@@ -20,6 +20,11 @@ from Proyecto1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
-    path('nosveremos/', despedida)    
+    path('nosveremos/', despedida),    
+    path('fecha/', dame_Fecha),
+    path('edades/<int:edad>/<int:agno>',calcula_Edad), #recibe como parametro la edad y el año(hay que convertirlo a int)
+    path('cursoc/', cursoC),
+    path('cursodjango/', cursoDjango),
+
 
 ]
